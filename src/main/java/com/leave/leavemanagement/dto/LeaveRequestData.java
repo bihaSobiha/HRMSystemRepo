@@ -4,16 +4,16 @@ import java.io.File;
 import java.time.ZonedDateTime;
 import java.util.Date;
 
-public class LeaveRequestDto {
+public class LeaveRequestData {
 
 	private Integer id;
-	private UserDto user;
-	private LeaveTypeDto leaveType;
+	private UserData user;
+	private LeaveTypeData leaveType;
 	private Date startDate;
 	private Date endDate;
 	private String reason;
 	private File attachment;
-	private StatusDto status;
+	private StatusData status;
 	private ZonedDateTime createdAt;
 	private ZonedDateTime updatedAt;
 
@@ -25,19 +25,19 @@ public class LeaveRequestDto {
 		this.id = id;
 	}
 
-	public UserDto getUser() {
+	public UserData getUser() {
 		return user;
 	}
 
-	public void setUser(UserDto user) {
+	public void setUser(UserData user) {
 		this.user = user;
 	}
 
-	public LeaveTypeDto getLeaveType() {
+	public LeaveTypeData getLeaveType() {
 		return leaveType;
 	}
 
-	public void setLeaveType(LeaveTypeDto leaveType) {
+	public void setLeaveType(LeaveTypeData leaveType) {
 		this.leaveType = leaveType;
 	}
 
@@ -73,11 +73,11 @@ public class LeaveRequestDto {
 		this.attachment = attachment;
 	}
 
-	public StatusDto getStatus() {
+	public StatusData getStatus() {
 		return status;
 	}
 
-	public void setStatus(StatusDto status) {
+	public void setStatus(StatusData status) {
 		this.status = status;
 	}
 

@@ -1,10 +1,10 @@
 package com.leave.leavemanagement.dto;
 
-public class RejectCarryforwardRequestDto {
+public class RejectCarryforwardRequestData {
 
 	private Integer id;
-	private CarryforwardRequestDto carryforwardRequest;
-	private UserDto rejectedBy;
+	private CarryforwardRequestData carryforwardRequest;
+	private UserData rejectedBy;
 	private String reason;
 
 	public Integer getId() {
@@ -15,19 +15,19 @@ public class RejectCarryforwardRequestDto {
 		this.id = id;
 	}
 
-	public CarryforwardRequestDto getCarryforwardRequest() {
+	public CarryforwardRequestData getCarryforwardRequest() {
 		return carryforwardRequest;
 	}
 
-	public void setCarryforwardRequest(CarryforwardRequestDto carryforwardRequest) {
+	public void setCarryforwardRequest(CarryforwardRequestData carryforwardRequest) {
 		this.carryforwardRequest = carryforwardRequest;
 	}
 
-	public UserDto getRejectedBy() {
+	public UserData getRejectedBy() {
 		return rejectedBy;
 	}
 
-	public void setRejectedBy(UserDto rejectedBy) {
+	public void setRejectedBy(UserData rejectedBy) {
 		this.rejectedBy = rejectedBy;
 	}
 

@@ -1,10 +1,10 @@
 package com.leave.leavemanagement.dto;
 
-public class LeaveAllocationDto {
+public class LeaveAllocationData {
 
 	private Integer id;
-	private UserDto user;
-	private LeaveTypeDto leaveType;
+	private UserData user;
+	private LeaveTypeData leaveType;
 	private Float allocatedDays;
 	private Float utilizedDays;
 
@@ -16,19 +16,19 @@ public class LeaveAllocationDto {
 		this.id = id;
 	}
 
-	public UserDto getUser() {
+	public UserData getUser() {
 		return user;
 	}
 
-	public void setUser(UserDto user) {
+	public void setUser(UserData user) {
 		this.user = user;
 	}
 
-	public LeaveTypeDto getLeaveType() {
+	public LeaveTypeData getLeaveType() {
 		return leaveType;
 	}
 
-	public void setLeaveType(LeaveTypeDto leaveType) {
+	public void setLeaveType(LeaveTypeData leaveType) {
 		this.leaveType = leaveType;
 	}
 

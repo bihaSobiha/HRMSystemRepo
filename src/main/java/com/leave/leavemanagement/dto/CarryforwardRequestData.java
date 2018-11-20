@@ -2,11 +2,12 @@ package com.leave.leavemanagement.dto;
 
 import java.time.ZonedDateTime;
 
-public class LeaveTypeDto {
+public class CarryforwardRequestData {
 
 	private Integer id;
-	private String leaveTypeValue;
-	private Float defaultAllocation;
+	private Integer carryForwardDays;
+	private UserData user;
+	private StatusData status;
 	private ZonedDateTime createdAt;
 	private ZonedDateTime updatedAt;
 
@@ -18,20 +19,28 @@ public class LeaveTypeDto {
 		this.id = id;
 	}
 
-	public String getLeaveTypeValue() {
-		return leaveTypeValue;
+	public Integer getCarryForwardDays() {
+		return carryForwardDays;
 	}
 
-	public void setLeaveTypeValue(String leaveTypeValue) {
-		this.leaveTypeValue = leaveTypeValue;
+	public void setCarryForwardDays(Integer carryForwardDays) {
+		this.carryForwardDays = carryForwardDays;
 	}
 
-	public Float getDefaultAllocation() {
-		return defaultAllocation;
+	public UserData getUser() {
+		return user;
 	}
 
-	public void setDefaultAllocation(Float defaultAllocation) {
-		this.defaultAllocation = defaultAllocation;
+	public void setUser(UserData user) {
+		this.user = user;
+	}
+
+	public StatusData getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusData status) {
+		this.status = status;
 	}
 
 	public ZonedDateTime getCreatedAt() {

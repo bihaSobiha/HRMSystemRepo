@@ -2,12 +2,12 @@ package com.leave.leavemanagement.dto;
 
 import java.util.Date;
 
-public class HolidayCalendarDto {
+public class HolidayCalendarData {
 
 	private Integer id;
 	private Date date;
 	private String description;
-	private UserDto enteredBy;
+	private UserData enteredBy;
 
 	public Integer getId() {
 		return id;
@@ -33,11 +33,11 @@ public class HolidayCalendarDto {
 		this.description = description;
 	}
 
-	public UserDto getEnteredBy() {
+	public UserData getEnteredBy() {
 		return enteredBy;
 	}
 
-	public void setEnteredBy(UserDto enteredBy) {
+	public void setEnteredBy(UserData enteredBy) {
 		this.enteredBy = enteredBy;
 	}
 

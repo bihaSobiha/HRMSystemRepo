@@ -1,10 +1,10 @@
 package com.leave.leavemanagement.dto;
 
-public class RejectLeaveRequestDto {
+public class RejectLeaveRequestData {
 
 	private Integer id;
-	LeaveRequestDto request;
-	UserDto rejectedBy;
+	LeaveRequestData request;
+	UserData rejectedBy;
 	private String reason;
 
 	public Integer getId() {
@@ -15,19 +15,19 @@ public class RejectLeaveRequestDto {
 		this.id = id;
 	}
 
-	public LeaveRequestDto getRequest() {
+	public LeaveRequestData getRequest() {
 		return request;
 	}
 
-	public void setRequest(LeaveRequestDto request) {
+	public void setRequest(LeaveRequestData request) {
 		this.request = request;
 	}
 
-	public UserDto getRejectedBy() {
+	public UserData getRejectedBy() {
 		return rejectedBy;
 	}
 
-	public void setRejectedBy(UserDto rejectedBy) {
+	public void setRejectedBy(UserData rejectedBy) {
 		this.rejectedBy = rejectedBy;
 	}
 

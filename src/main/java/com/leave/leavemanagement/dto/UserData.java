@@ -1,6 +1,6 @@
 package com.leave.leavemanagement.dto;
 
-public class UserDto {
+public class UserData {
 
 	private Integer userId;
 	private String userName;

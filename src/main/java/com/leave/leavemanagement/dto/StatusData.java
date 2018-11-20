@@ -1,6 +1,6 @@
 package com.leave.leavemanagement.dto;
 
-public class StatusDto {
+public class StatusData {
 
 	private Integer id;
 	private String statusValue;

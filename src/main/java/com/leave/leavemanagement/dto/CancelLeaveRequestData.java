@@ -1,11 +1,11 @@
 package com.leave.leavemanagement.dto;
 
-public class CancelLeaveRequestDto {
+public class CancelLeaveRequestData {
 
 	private Integer id;
-	private LeaveRequestDto leaveRequest;
+	private LeaveRequestData leaveRequest;
 	private String reason;
-	private StatusDto status;
+	private StatusData status;
 
 	public Integer getId() {
 		return id;
@@ -15,11 +15,11 @@ public class CancelLeaveRequestDto {
 		this.id = id;
 	}
 
-	public LeaveRequestDto getLeaveRequest() {
+	public LeaveRequestData getLeaveRequest() {
 		return leaveRequest;
 	}
 
-	public void setLeaveRequest(LeaveRequestDto leaveRequest) {
+	public void setLeaveRequest(LeaveRequestData leaveRequest) {
 		this.leaveRequest = leaveRequest;
 	}
 
@@ -31,11 +31,11 @@ public class CancelLeaveRequestDto {
 		this.reason = reason;
 	}
 
-	public StatusDto getStatus() {
+	public StatusData getStatus() {
 		return status;
 	}
 
-	public void setStatus(StatusDto status) {
+	public void setStatus(StatusData status) {
 		this.status = status;
 	}
 
