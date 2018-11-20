@@ -8,25 +8,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "accept_cancel_request")
-public class AcceptCancelRequest implements Serializable {
+@Table(name = "accept_leave_request")
+public class AcceptLeaveRequest implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 5095838859692805752L;
+	private static final long serialVersionUID = 5855081315920405445L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@OneToOne
-	@JoinColumn(name = "cancel_leave_request_id")
-	private CancelLeaveRequest cancelLeaveRequest;
+	@ManyToOne
+	@JoinColumn(name = "request_id")
+	private LeaveRequest request;
 
 	@ManyToOne
 	@JoinColumn(name = "accepted_by")
@@ -40,12 +39,12 @@ public class AcceptCancelRequest implements Serializable {
 		this.id = id;
 	}
 
-	public CancelLeaveRequest getCancelLeaveRequest() {
-		return cancelLeaveRequest;
+	public LeaveRequest getRequest() {
+		return request;
 	}
 
-	public void setCancelLeaveRequest(CancelLeaveRequest cancelLeaveRequest) {
-		this.cancelLeaveRequest = cancelLeaveRequest;
+	public void setRequest(LeaveRequest request) {
+		this.request = request;
 	}
 
 	public User getAcceptedBy() {
@@ -55,4 +54,5 @@ public class AcceptCancelRequest implements Serializable {
 	public void setAcceptedBy(User acceptedBy) {
 		this.acceptedBy = acceptedBy;
 	}
+
 }

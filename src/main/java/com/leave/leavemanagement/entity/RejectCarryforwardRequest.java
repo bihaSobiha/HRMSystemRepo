@@ -2,6 +2,7 @@ package com.leave.leavemanagement.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,26 +10,30 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
-public class RejectCarryforwardRequest implements Serializable{
+@Table(name = "reject_carryforward_request")
+public class RejectCarryforwardRequest implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -2160999335910289857L;
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	@OneToOne
+	@JoinColumn(name = "carryforward_request_id")
 	private CarryforwardRequest carryforwardRequest;
-	
+
 	@ManyToOne
-	@JoinColumn(name="rejected_by")
-	private User user;
-	
+	@JoinColumn(name = "rejected_by")
+	private User rejectedBy;
+
+	@Column(name = "reason")
 	private String reason;
 
 	public Integer getId() {
@@ -47,12 +52,12 @@ public class RejectCarryforwardRequest implements Serializable{
 		this.carryforwardRequest = carryforwardRequest;
 	}
 
-	public User getUser() {
-		return user;
+	public User getRejectedBy() {
+		return rejectedBy;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setRejectedBy(User rejectedBy) {
+		this.rejectedBy = rejectedBy;
 	}
 
 	public String getReason() {

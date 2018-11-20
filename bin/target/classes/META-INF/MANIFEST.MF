@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: HRMLeaveManagement
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Anushanth
+Implementation-Vendor-Id: com.leave
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/HRMLeaveManagement
+Created-By: Maven Integration for Eclipse
+

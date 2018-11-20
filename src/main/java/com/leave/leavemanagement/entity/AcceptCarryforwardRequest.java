@@ -9,25 +9,28 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
-public class AcceptCarryforwardRequest implements Serializable{
+@Table(name = "accept_carryforward_request")
+public class AcceptCarryforwardRequest implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8390568963612482507L;
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	@OneToOne
+	@JoinColumn(name = "carryforward_request_id")
 	private CarryforwardRequest carryforwardRequest;
-	
+
 	@ManyToOne
-	@JoinColumn(name="accepted_by")
-	private User user;
+	@JoinColumn(name = "accepted_by")
+	private User acceptedBy;
 
 	public Integer getId() {
 		return id;
@@ -45,12 +48,12 @@ public class AcceptCarryforwardRequest implements Serializable{
 		this.carryforwardRequest = carryforwardRequest;
 	}
 
-	public User getUser() {
-		return user;
+	public User getAcceptedBy() {
+		return acceptedBy;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setAcceptedBy(User acceptedBy) {
+		this.acceptedBy = acceptedBy;
 	}
 
 }

@@ -3,30 +3,37 @@ package com.leave.leavemanagement.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "holiday_calendar")
 public class HolidayCalendar implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 6215661525000035290L;
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+
+	@Column(name = "date")
 	private Date date;
+
+	@Column(name = "description")
 	private String description;
-	
+
 	@ManyToOne
-	@JoinColumn(name="entered_by")
-	private User user;
+	@JoinColumn(name = "entered_by")
+	private User enteredBy;
 
 	public Integer getId() {
 		return id;
@@ -52,14 +59,12 @@ public class HolidayCalendar implements Serializable {
 		this.description = description;
 	}
 
-	public User getUser() {
-		return user;
+	public User getEnteredBy() {
+		return enteredBy;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setEnteredBy(User enteredBy) {
+		this.enteredBy = enteredBy;
 	}
-
-	
 
 }
